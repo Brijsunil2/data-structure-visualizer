@@ -1,0 +1,108 @@
+@import "./colors.scss";
+@import "./variables.scss";
+@import "./fonts.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: map-get($colors, "bg-color");
+  font-family: $font-ui;
+  color: map-get($colors, "pg-white");
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+h5 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+h6 {
+  font-size: 0.875rem;
+}
+
+p,
+li {
+  font-size: 1rem;
+  font-weight: 200;
+}
+
+button, input[button] {
+  color: map-get($colors, "neon-green");
+
+  &:hover {
+    background-color: map-get($colors, "mint-green");
+  }
+}
+
+a {
+  text-decoration: none;
+  color: map-get($colors, "neon-green");
+}
+
+small {
+  font-size: 0.75rem;
+}
+
+img {
+  display: block;
+}
+
+.content-box {
+  background-color: map-get($colors, "slate-gray");
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.highlight-font {
+  color: map-get($colors, "cool-blue");
+}
+
+.code-area {
+  background-color: map-get($colors, "slate-gray");
+  color: map-get($colors, "neon-green");
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-family: $font-code;
+}
+
+.wrapper-width-md {
+  @media (min-width: map-get($breakpoints, "lg")) {
+    max-width: map-get($breakpoints, "md");
+  }
+}
+
+.wrapper-width-xl {
+  @media (min-width: map-get($breakpoints, "xxl")) {
+    max-width: map-get($breakpoints, "xl");
+  }
+}
