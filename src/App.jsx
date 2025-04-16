@@ -1,6 +1,10 @@
+import Header from "./components/Header/Header"
+
 const App = () => {
   return (
-    <div>App</div>
+    <main className="app wrapper-width-md wrapper-width-xl">
+      <Header />
+    </main>
   )
 }
 
