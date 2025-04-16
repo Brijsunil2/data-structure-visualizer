@@ -1,6 +1,7 @@
-@import "./colors.scss";
-@import "./variables.scss";
-@import "./fonts.scss";
+@use "sass:map";
+@use "colors.scss";
+@use "variables.scss";
+@use "fonts.scss";
 
 * {
   padding: 0;
@@ -17,9 +18,9 @@ html {
 }
 
 body {
-  background-color: map-get($colors, "bg-color");
-  font-family: $font-ui;
-  color: map-get($colors, "pg-white");
+  background-color: map.get(colors.$colors, "bg-color");
+  font-family: fonts.$font-ui;
+  color: map.get(colors.$colors, "pg-white");
 }
 
 h1 {
@@ -57,16 +58,16 @@ li {
 }
 
 button, input[button] {
-  color: map-get($colors, "neon-green");
+  color: map.get(colors.$colors, "neon-green");
 
   &:hover {
-    background-color: map-get($colors, "mint-green");
+    background-color: map.get(colors.$colors, "mint-green");
   }
 }
 
 a {
   text-decoration: none;
-  color: map-get($colors, "neon-green");
+  color: map.get(colors.$colors, "neon-green");
 }
 
 small {
@@ -78,31 +79,31 @@ img {
 }
 
 .content-box {
-  background-color: map-get($colors, "slate-gray");
+  background-color: map.get(colors.$colors, "slate-gray");
   padding: 1rem;
   border-radius: 0.5rem;
 }
 
 .highlight-font {
-  color: map-get($colors, "cool-blue");
+  color: map.get(colors.$colors, "cool-blue");
 }
 
 .code-area {
-  background-color: map-get($colors, "slate-gray");
-  color: map-get($colors, "neon-green");
+  background-color: map.get(colors.$colors, "slate-gray");
+  color: map.get(colors.$colors, "neon-green");
   padding: 1rem;
   border-radius: 0.5rem;
-  font-family: $font-code;
+  font-family: fonts.$font-code;
 }
 
 .wrapper-width-md {
-  @media (min-width: map-get($breakpoints, "lg")) {
-    max-width: map-get($breakpoints, "md");
+  @media (min-width: map.get(variables.$breakpoints, "lg")) {
+    max-width: map.get(variables.$breakpoints, "md");
   }
 }
 
 .wrapper-width-xl {
-  @media (min-width: map-get($breakpoints, "xxl")) {
-    max-width: map-get($breakpoints, "xl");
+  @media (min-width: map.get(variables.$breakpoints, "xxl")) {
+    max-width: map.get(variables.$breakpoints, "xl");
   }
 }
