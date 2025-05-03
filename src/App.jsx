@@ -1,9 +1,10 @@
 import Header from "./components/Header/Header";
 import DataStructurePage from "./pages/DataStructurePage/DataStructurePage";
-import Array from "./utils/dataStructures/array/array";
+import LinkedList from "./utils/DataStructures/LinkedList/LinkedList";
 
 const App = () => {
-  const array = new Array();
+  const linkedList = new LinkedList();
+  linkedList.test();
   
   return (
     <main className="app wrapper-width-md wrapper-width-xl">
