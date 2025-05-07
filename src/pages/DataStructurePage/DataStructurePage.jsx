@@ -1,8 +1,8 @@
-import "./DataStructurePage.scss"
+import "./DataStructurePage.scss";
 
 const DataStructurePage = () => {
   return (
-    <div className="data-structure-page wrapper-width-xl wrapper-width-md">DataStructurePage</div>
+    <div>hi</div>
   )
 }
 
